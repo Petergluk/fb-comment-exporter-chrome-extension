@@ -1,0 +1,159 @@
+/* Горизонтальный блок иконок справа от кнопки «Поделиться» (↗ 103) — v2.4 */
+.fb-md-export-toolbar {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 6px !important;
+  margin-left: 10px !important;
+  margin-right: auto !important;
+  position: relative !important;
+  z-index: 50 !important;
+  flex-shrink: 0 !important;
+  vertical-align: middle !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Аккуратная маленькая кнопка-иконка 28x28px (при появлении цифр автоматически расширяется по ширине) */
+.fb-md-icon-btn,
+.fb-md-reposts-btn {
+  position: relative !important;
+  z-index: 51 !important;
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  min-width: 28px !important;
+  width: auto !important;
+  height: 28px !important;
+  padding: 0 6px !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(8, 102, 255, 0.3) !important;
+  background-color: #ebf5ff !important;
+  color: #0866ff !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  pointer-events: auto !important;
+  overflow: visible !important;
+  transition: background-color 0.14s ease, border-color 0.14s ease, transform 0.1s ease;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+}
+
+.fb-md-icon-btn span {
+  display: inline-block !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  color: inherit !important;
+  margin-left: 2px !important;
+}
+
+.fb-md-icon-btn:hover {
+  background-color: #dbeafe !important;
+  border-color: #0866ff !important;
+}
+
+.fb-md-icon-btn:active,
+.fb-md-reposts-btn:active {
+  transform: scale(0.94);
+}
+
+.fb-md-icon-btn svg,
+.fb-md-reposts-btn svg {
+  width: 15px !important;
+  height: 15px !important;
+  flex-shrink: 0 !important;
+  pointer-events: none;
+}
+
+.fb-md-icon-btn[data-state="working"] {
+  background-color: #fef3c7 !important;
+  border-color: #d97706 !important;
+  color: #92400e !important;
+  cursor: wait !important;
+  padding: 0 8px !important;
+}
+
+.fb-md-icon-btn[data-state="done"] {
+  background-color: #dcfce7 !important;
+  border-color: #16a34a !important;
+  color: #166534 !important;
+  padding: 0 8px !important;
+}
+
+/* Вторая маленькая кнопка — открытие всех репостов */
+.fb-md-reposts-btn {
+  border-color: rgba(28, 30, 33, 0.18) !important;
+  background-color: #f0f2f5 !important;
+  color: #4b4f56 !important;
+}
+
+.fb-md-reposts-btn:hover {
+  background-color: #e4e6eb !important;
+  border-color: rgba(28, 30, 33, 0.32) !important;
+  color: #1c1e21 !important;
+}
+
+/* Плавающий индикатор прогресса в правом нижнем углу экрана (виден, даже когда шапка поста уехала вверх при скролле) */
+#fb-md-floating-status {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 2147483647 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 14px !important;
+  border-radius: 10px !important;
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  pointer-events: none !important;
+}
+
+#fb-md-floating-status svg {
+  width: 15px !important;
+  height: 15px !important;
+  flex-shrink: 0 !important;
+  color: #38bdf8 !important;
+}
+
+#fb-md-floating-status[data-state="done"] {
+  background-color: #14532d !important;
+  border-color: #22c55e !important;
+}
+
+#fb-md-floating-status[data-state="done"] svg {
+  color: #4ade80 !important;
+}
+
+.__fb-dark-mode .fb-md-icon-btn {
+  background-color: rgba(45, 136, 255, 0.2) !important;
+  border-color: rgba(45, 136, 255, 0.45) !important;
+  color: #70b5f9 !important;
+}
+
+.__fb-dark-mode .fb-md-reposts-btn {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  color: #e4e6eb !important;
+}
+
+@keyframes fb-md-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fb-md-spin {
+  animation: fb-md-spin 0.85s linear infinite;
+}
