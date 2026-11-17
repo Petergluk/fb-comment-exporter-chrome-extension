@@ -2,7 +2,7 @@
 
 Экспорт фейсбук-поста вместе со всеми ветками комментариев в формате Markdown (`.md`) и быстрое открытие скрытой ленты репостов.
 
-Компактное расширение для браузеров на базе Chromium (**Google Chrome, Brave, Arc, Microsoft Edge, Vivaldi, Яндекс.Браузер**), которое добавляет в окно публикации Facebook две аккуратные кнопки-иконки (`28×28px`) сразу справа от счётчика репостов:
+Расширение для браузеров на базе Chromium (**Google Chrome, Brave, Arc, Microsoft Edge, Vivaldi, Яндекс.Браузер**), которое добавляет в модельное окно публикации Facebook две кнопки-иконки сразу справа от счётчика репостов:
 
 ```text
 👍 397   💬 251   ↗ 103   [ ⬇ ]  [ ☍ ]                        👁 78 549
@@ -32,11 +32,8 @@
 Так как расширение устанавливается напрямую из исходников в режиме разработчика, подписка Chrome Web Store не требуется:
 
 ### Шаг 1. Скачайте файлы репозитория
-- **Вариант А (через архив):** нажмите зелёную кнопку **`<> Code`** в правом верхнем углу страницы репозитория [Petergluk/fb-comment-exporter-chrome-extension](https://github.com/Petergluk/fb-comment-exporter-chrome-extension) и выберите **`Download ZIP`**. Распакуйте скачанный архив в любую постоянную папку на компьютере (например, `Документы/fb-comment-exporter-chrome-extension`).
-- **Вариант Б (через Git):**
-  ```bash
-  git clone https://github.com/Petergluk/fb-comment-exporter-chrome-extension.git
-  ```
+- **Нажмите зелёную кнопку** **`<> Code`** в правом верхнем углу страницы репозитория [Petergluk/fb-comment-exporter-chrome-extension](https://github.com/Petergluk/fb-comment-exporter-chrome-extension) и выберите **`Download ZIP`**. 
+- Распакуйте скачанный архив в любую постоянную папку на компьютере (например, `Документы/fb-comment-exporter-chrome-extension`).
 
 > ⚠️ **Важно:** не удаляйте распакованную папку после установки — браузер запускает расширение напрямую из неё.
 
@@ -47,7 +44,7 @@
    - Edge: `edge://extensions`
 2. В правом верхнем углу включите переключатель **«Режим разработчика» (Developer mode)**.
 3. В левом верхнем углу нажмите кнопку **«Загрузить распакованное расширение» (Load unpacked)**.
-4. Выберите папку `fb-comment-exporter-chrome-extension` (ту, внутри которой лежит файл `manifest.json`).
+4. Выберите папку `fb-comment-exporter-chrome-extension` (ту, внутри которой лежит файл `manifest.json`). Всё.
 
 ### Шаг 3. Как пользоваться
 1. Откройте [facebook.com](https://www.facebook.com) (если вкладка уже была открыта — обновите её через `F5` / `Cmd + R`).
